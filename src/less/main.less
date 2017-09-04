@@ -26,13 +26,15 @@ p {
     font-family: QuicksandLight;
     src: url('../img/Quicksand-Light.ttf');
 }
+@primary-color: #59ae7f;
+
 .row {
     width: 100%;
     display: inline-block;
     vertical-align: top;
 }
 .default-background {
-    background-color: white;
+    background-color: #fff;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -64,56 +66,13 @@ sans-serif;
 	text-align: center;
 }
 
-.services-header {
-    text-align: center;
-    font-family: Quicksand;
-    font-size: 120%;
-    text-transform: uppercase;
-    color: #616161;
-    padding: 40px;
-    color: #e67e22;
-}
+
 .feature-section {
-    background: #005057;
-    padding: 40px;
+    background: #fff;
+    padding: 3rem 3rem;
     font-family: Quicksand-Light;
     font-size: 80%;
-}
-.filler-image {
-    background-image: url('../img/thought-catalog-214785-min.jpg');
-    background-position: 50%;
-    background-attachment: fixed;
-    background-size: cover;
-    background-repeat: no-repeat;
-    filter: brightness(80%);
-    height: 200px;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    height: 350px;
-}
-.feature {
     color: #fff;
-    padding: 10px 10px 10px 10px;
-    font-family: Quicksand-Light;
-    list-style: none;
-}
-.feature:before {
-    content: '';
-    display: inline-block;
-    height: 20px;
-    width: 25px;
-    background-image: url('../img/check.svg');
-    padding-right: 20px;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.filler-laptop {
-    display: none;
-}
-
-#aboutus {
-	background-color: #fff;
 }
 
 @hero-image-length: 100vh;
@@ -129,50 +88,13 @@ sans-serif;
     top: 0;
     width: 100%;
 }
-@keyframes wave {
-    0% {
-        opacity: 0;
-    }
-    30% {
-        opacity: 1;
-    }
-    60% {
-        box-shadow: 0 0 0 60px rgba(255, 255, 255, .1);
-        opacity: 0;
-    }
-    100% {
-        opacity: 0;
-    }
-}
+
 .details {
     top: 100vh;
     position: absolute;
     width: 100%;
 }
-.details-section {
-    padding: 40px;
-}
-.aboutme h3 {
-    text-align: center;
-}
-.aboutme p {
-    text-align: center;
-}
-.services-img {
-    height: 60px;
-    width: 60px;
-    display: block;
-    margin: auto;
-    opacity: 0.5;
-}
-.horizontal-line {
-    display: block;
-    width: 50px;
-    height: 1px;
-    opacity: 0.5;
-    background: #000;
-    margin: 20px 0px;
-}
+
 .social svg {
     display: inline-block;
     height: 1rem;
@@ -192,7 +114,8 @@ sans-serif;
 	margin: 0;
 	padding: 0;
 }
-.splitter1 {
+
+.hero-text-holder {
     position: absolute;
     top: 3.5rem;
     left: 0;
@@ -203,36 +126,49 @@ sans-serif;
     margin: 0;
 }
 
-.splitter2 {
+.about-us-holder {
 	margin: 0;
-	background: #59AE7F;
+	background: @primary-color;
 	color: #fff;
 	padding: 3rem;
-	margin: -3rem 0;
+	margin: 0 0;
 }
-.services-subheader {
-    font-size: 120%;
-    text-aign: left;
-    color: #616161;
+
+.vision-holder {
+	margin: 0;
+	background: #D4C6C6;
+	color: #fff;
+	padding: 3rem;
+	margin: 0;
 }
-.footer-header {
-    color: #fff;
+
+.mission-holder {
+	margin: 0;
+	background: #F4EDF6;
+	color: @primary-color;
+	padding: 3rem;
+	margin: 0;
+	height: 100%;
+}
+
+.section-header {
     font-size: 120%;
     font-family: QuicksandExtraBold;
     padding: 1rem;
 }
-.footer-text {
+.section-text {
     padding: 10px;
     padding-left: 20px;
     font-size: 120%;
 }
 .copyright-text {
-    .footer-text;
+    .section-text;
     text-align: center!important;
 	color: #fff;
 }
+
 .copyright {
-    background: #59AE7F;
+    background: @primary-color;
     font-size: 80%;
 }
 
@@ -246,37 +182,47 @@ sans-serif;
     position: relative;
     width: 100%;
 }
+
 @media (min-width: 900px) {
+    .hero-text-holder {
+        width: 40%;
+        background: rgba(85, 174, 127, 0.5);
+        margin-left: 6rem;
+    }
+	.about-us-holder {
+		margin: 0 6rem;
+	}
+
+	.vision-holder {
+		margin-left: 8rem;
+	}
+
+	.mission-holder {
+		margin-right: 8rem;
+	}
+	
+	.feature-section {
+		padding: 3rem 8rem;
+	}
+
     .social {
         width: auto;
     }
-    .filler-laptop {
-        display: inline;
-        height: 300px;
-        margin-top: -30px;
-        padding-left: 100px;
-    }
-    .feature-section {
-        background: #005057;
-        padding: 3rem 6rem;
-        font-family: Quicksand-Light;
-        font-size: 80%;
-		color: #fff;
-    }
+	
     .aboutmelink {
         transition: all .3s;
         border-top: transparent solid 3px;
         text-transform: uppercase;
     }
     .aboutmelink:hover {
-        border-top: #59AE7F solid 3px;
+        border-top: @primary-color solid 3px;
     }
     .brand-logo {
         float: left;
         text-decoration: none;
         color: #fff;
 		text-transform: uppercase;
-		background: #59AE7F;
+		background: @primary-color;
         line-height: 3.5rem;
         display: inline-block;
         padding: 0 2rem;
@@ -290,7 +236,7 @@ sans-serif;
     }
     .menu a:link,
     .menu a:visited {
-        color: #59AE7F;
+        color: @primary-color;
         text-decoration: none;
         font-size: 80%;
         display: inline-block;
@@ -304,16 +250,7 @@ sans-serif;
         display: inline-block;
         background-color: rgba(0, 0, 0, 0.1);
     }
-    .splitter1 {
-        position: absolute;
-        top: 3.5rem;
-        left: 0;
-        height: 100vh;
-        width: 40%;
-        background: rgba(85, 174, 127, 0.5);
-        float: left;
-        margin-left: 6rem;
-    }
+
     .menu {
         display: inline;
     }
